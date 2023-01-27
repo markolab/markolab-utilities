@@ -18,6 +18,7 @@ ENV_URL ="https://raw.githubusercontent.com/markolab/markolab-envs/main"
 curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 
+source ~/.bashrc
 conda activate
 conda env update --file ~/base.yml --prune
 conda env create -f ~/datastack.yml
