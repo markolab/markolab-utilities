@@ -14,7 +14,7 @@ curl "${MINICONDA_URL}" -o ~/miniconda.sh -s
 bash ~/miniconda.sh -b -p $INSTALLDIR
 
 # could write this to tmpdir...
-ENV_URL ="https://raw.githubusercontent.com/markolab/markolab-envs/main"
+ENV_URL="https://raw.githubusercontent.com/markolab/markolab-envs/main"
 curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 
