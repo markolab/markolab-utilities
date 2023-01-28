@@ -17,4 +17,4 @@
 #SBATCH -A gts-jmarkowitz30
 
 source ${HOME}/conda_activate # we symlinked this from conda/bin
-. ${HOME}/pace-scripts/jupyter-lab-pace.sh # script that kicks off jupyter
+. ${HOME}/pace/shell/jupyter-lab-pace.sh # script that kicks off jupyter
