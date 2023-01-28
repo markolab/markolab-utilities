@@ -21,4 +21,8 @@ curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 source ${INSTALLDIR}/bin/activate
 conda env update --file ~/base.yml --prune
 conda env create -f ~/datastack.yml
-conda init bash
+# DO NOT ALTER BASHRC
+# conda init bash 
+
+# symlink at the activation script, easy to source post-login
+ln -s ${INSTALLDIR}/bin/activate ${HOME}/conda_activate
