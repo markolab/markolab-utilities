@@ -1,10 +1,18 @@
 # Run jupyter for an extended period of time
-#PBS -N jupyterlab
+# -N name of job
+# -l options - nodes=number of nodes, ppn=processors per node
+# mem=memory
+# walltime=walltime
+# -q queue
+# -m notifications
+# -A charge account
+#PBS -N jupyterlab-test
 #PBS -l nodes=1:ppn=10
-#PBS -l pmem=6gb
-#PBS -l walltime=120:00:00
+#PBS -l mem=50gb
+#PBS -l walltime=48:00:00
 #PBS -q inferno
-#PBS -k oe
 #PBS -m abe
+#PBS -A GT-jmarkowitz30
 
-./${HOME}/pace-scripts/jupyter-lab-pace.sh
+source ${HOME}/pace-scripts/conda_activate
+. ${HOME}/pace-scripts/jupyter-lab-pace.sh
