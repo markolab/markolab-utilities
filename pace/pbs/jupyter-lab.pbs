@@ -14,5 +14,5 @@
 #PBS -m abe
 #PBS -A GT-jmarkowitz30
 
-source ${HOME}/pace-scripts/conda_activate
-. ${HOME}/pace-scripts/jupyter-lab-pace.sh
+source ${HOME}/conda_activate  # symlinked from conda/bin
+. ${HOME}/markolab-utilities/pace-scripts/jupyter-lab-pace.sh  # kicks off jupyter
