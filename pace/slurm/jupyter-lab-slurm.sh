@@ -12,9 +12,9 @@
 #SBATCH --partition cpu-small
 #SBATCH --ntasks 1
 #SBATCH --cpus-per-task 10
-#SBATCH --mem 50GB
+#SBATCH --mem 60GB
 #SBATCH --time 2-00:00:00
 #SBATCH -A gts-jmarkowitz30
 
 source ${HOME}/conda_activate # we symlinked this from conda/bin
-. ${HOME}/pace/shell/jupyter-lab-pace.sh # script that kicks off jupyter
+. ${HOME}/markolab-utilities/pace/shell/jupyter-lab-pace.sh # script that kicks off jupyter
