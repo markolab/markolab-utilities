@@ -9,7 +9,18 @@ fi
 
 # get miniconda and install
 UNAME_M="$(uname -m)" 
-MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-${UNAME_M}.sh";
+OS="$(uname)"
+
+if [ "$OS" == "Linux" ]; then
+	OS_STRING="Linux"
+elif [ "$OS" == "Darwin" ]; then
+	OS_STRING="MacOSX"
+else
+	echo "Did not understand OS: $OS"
+	exit 1
+fi
+
+MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-${OS_STRING}-${UNAME_M}.sh";
 curl "${MINICONDA_URL}" -o ~/miniconda.sh -s
 bash ~/miniconda.sh -b -p $INSTALLDIR
 
