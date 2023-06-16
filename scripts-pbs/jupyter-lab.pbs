@@ -6,5 +6,6 @@
 #PBS -q inferno
 #PBS -k oe
 #PBS -m abe
+#PBS -A $(whoami)
 
 ./${HOME}/pace-scripts/jupyter-lab-pace.sh
