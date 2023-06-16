@@ -1,0 +1,18 @@
+# Run jupyter for an extended period of time
+# -N name of job
+# -l options - nodes=number of nodes, ppn=processors per node
+# mem=memory
+# walltime=walltime
+# -q queue
+# -m notifications
+# -A charge account
+#PBS -N jupyterlab-test
+#PBS -l nodes=1:ppn=10
+#PBS -l mem=50gb
+#PBS -l walltime=48:00:00
+#PBS -q inferno
+#PBS -m abe
+#PBS -A GT-jmarkowitz30
+
+source ${HOME}/conda_activate  # symlinked from conda/bin
+. ${HOME}/markolab-utilities/pace/shell/jupyter-lab-pace.sh  # kicks off jupyter

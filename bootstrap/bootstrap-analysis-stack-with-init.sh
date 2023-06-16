@@ -33,7 +33,7 @@ source ${INSTALLDIR}/bin/activate
 conda env update --file ~/base.yml --prune
 conda env create -f ~/datastack.yml
 # DO NOT ALTER BASHRC
-# conda init bash 
+conda init bash 
 
 # symlink at the activation script, easy to source post-login
-ln -s ${INSTALLDIR}/bin/activate ${HOME}/conda_activate
+# ln -s ${INSTALLDIR}/bin/activate ${HOME}/conda_activate
