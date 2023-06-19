@@ -13,7 +13,7 @@ OS="$(uname)"
 
 if [ "$OS" == "Linux" ]; then
 	curl micro.mamba.pm/install.sh | bash
-	./bin/micromamba shell init -s bash -p ~/micromamba
+	~/.local/bin/micromamba shell init -s bash -p ~/micromamba
 	source ~/.bashrc
 elif [ "$OS" == "Darwin" ]; then
 	curl micro.mamba.pm/install.sh | zsh
@@ -29,6 +29,9 @@ ENV_URL="https://raw.githubusercontent.com/markolab/markolab-envs/main"
 curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 curl "${ENV_URL}/segmentation-cpu.yml" -o ~/segmentation-cpu.yml -s
+
+# export MAMBA_ROOT_PREFIX=~/micromamba  # optional, defaults to ~/micromamba
+# eval "$(./bin/micromamba shell hook -s posix)"
 
 micromamba activate
 micromamba install -f ~/base.yml -y
