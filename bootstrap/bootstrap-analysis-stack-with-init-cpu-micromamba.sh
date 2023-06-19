@@ -7,7 +7,7 @@ curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 curl "${ENV_URL}/segmentation-cpu.yml" -o ~/segmentation-cpu.yml -s
 
 export MAMBA_ROOT_PREFIX=~/micromamba  # optional, defaults to ~/micromamba
-eval "$(./bin/micromamba shell hook -s posix)"
+eval "$(./bin/micromamba shell hook -s posix)" # now we should be good...
 
 micromamba activate
 micromamba install -f ~/base.yml -y

@@ -28,10 +28,10 @@ bash ~/miniconda.sh -b -p $INSTALLDIR
 ENV_URL="https://raw.githubusercontent.com/markolab/markolab-envs/main"
 curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
-curl "${ENV_URL}/segmentation-cuda-11_8.yml" -o ~/segmentation-cuda-11_8.yml -s
+curl "${ENV_URL}/segmentation-cuda-12_0.yml" -o ~/segmentation-cuda-12_0.yml -s
 
 source ${INSTALLDIR}/bin/activate
 conda env update --file ~/base.yml --prune
 conda env create -f ~/datastack.yml
-conda env create -f ~/segmentation-cuda-11_8.yml
+conda env create -f ~/segmentation-cuda-12_0.yml
 conda init bash
