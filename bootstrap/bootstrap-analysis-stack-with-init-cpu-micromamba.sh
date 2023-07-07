@@ -5,9 +5,9 @@ ENV_URL="https://raw.githubusercontent.com/markolab/markolab-envs/main"
 curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 curl "${ENV_URL}/segmentation-cpu.yml" -o ~/segmentation-cpu.yml -s
-
 curl -Ls "https://micro.mamba.pm/api/micromamba/linux-64/latest" | tar -xvj bin/micromamba
-sudo mv bin/micromamba /bin/
+
+sudo mv ~/bin/micromamba /bin/
 mkdir ~/micromamba
 export MAMBA_ROOT_PREFIX=~/micromamba  # optional, defaults to ~/micromamba
 eval "$(/bin/micromamba shell hook -s posix)" # now we should be good...
