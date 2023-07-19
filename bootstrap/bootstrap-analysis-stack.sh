@@ -28,10 +28,13 @@ bash ~/miniconda.sh -b -p $INSTALLDIR
 ENV_URL="https://raw.githubusercontent.com/markolab/markolab-envs/main"
 curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
+curl "${ENV_URL}/segmentation-cpu.yml" -o ~/segmentation-cpu.yml -s
 
 source ${INSTALLDIR}/bin/activate
 conda env update --file ~/base.yml --prune
 conda env create -f ~/datastack.yml
+conda env create -f ~/segmentation-cpu.yml
+
 # DO NOT ALTER BASHRC
 # conda init bash 
 
