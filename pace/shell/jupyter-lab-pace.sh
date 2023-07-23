@@ -1,7 +1,8 @@
 #!/bin/bash
 
 if [ -z "$JUPYTER_PORT" ]; then 
-	port=$(shuf -i 5000-8000 -n 1)
+	# binds an unused port
+	port=$(python -c 'import socket; s=socket.socket(); s.bind(("", 0)); print(s.getsockname()[1]); s.close()')
 else
 	port=$JUPYTER_PORT
 fi
