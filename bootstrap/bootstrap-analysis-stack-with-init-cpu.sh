@@ -30,13 +30,14 @@ curl "${ENV_URL}/base.yml" -o ~/base.yml -s
 curl "${ENV_URL}/datastack.yml" -o ~/datastack.yml -s
 curl "${ENV_URL}/segmentation-cpu.yml" -o ~/segmentation-cpu.yml -s
 
+
 source ${INSTALLDIR}/bin/activate
 conda env update --file ~/base.yml --prune
 conda env create -f ~/datastack.yml
 conda env create -f ~/segmentation-cpu.yml
 
 # DO NOT ALTER BASHRC
-# conda init bash 
+conda init bash 
 
 # symlink at the activation script, easy to source post-login
-ln -s ${INSTALLDIR}/bin/activate ${HOME}/conda_activate
+# ln -s ${INSTALLDIR}/bin/activate ${HOME}/conda_activate
