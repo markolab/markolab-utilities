@@ -20,7 +20,7 @@ else
 	exit 1
 fi
 
-MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-${OS_STRING}-${UNAME_M}.sh";
+MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-py310_23.5.2-0-${OS_STRING}-${UNAME_M}.sh";
 curl "${MINICONDA_URL}" -o ~/miniconda.sh -s
 bash ~/miniconda.sh -b -p $INSTALLDIR
 
