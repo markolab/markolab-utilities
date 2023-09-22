@@ -18,6 +18,7 @@
 #SBATCH --mem 60GB
 #SBATCH --time 2-00:00:00
 #SBATCH -A gts-jmarkowitz30-paid
+#SBATCH -q inferno
 
 source ${HOME}/conda_activate # we symlinked this from conda/bin
 #. ${HOME}/markolab-utilities/pace/shell/jupyter-lab-pace.sh # script that kicks off jupyter
